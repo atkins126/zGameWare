@@ -175,7 +175,7 @@ begin
     var
       oriMR: TMemoryRaster;
     begin
-      oriMR := NewRasterFromFile(umlCombineFileName(TPath.GetLibraryPath, 'lena.bmp'));
+      oriMR := NewRasterFromFile(TPath.GetLibraryPath+'lena.bmp');
 
       BuildFormat(oriMR.SaveToBmp24Stream, Image1.Bitmap, 'RGB24');
       BuildFormat(oriMR.SaveToFastYV12Stream, Image2.Bitmap, 'YV12-Loss');
